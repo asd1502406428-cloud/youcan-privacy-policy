@@ -4,16 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YouCan 自律盲盒｜隱私權政策</title>
+  <meta name="description" content="YouCan 自律盲盒隱私權政策，說明資料收集、使用、保存與聯絡方式。" />
   <style>
     :root {
       --bg: #f5f5f7;
-      --card: rgba(255, 255, 255, 0.78);
+      --bg-2: #fbfbfd;
       --text: #1d1d1f;
-      --secondary: #6e6e73;
-      --line: rgba(0, 0, 0, 0.08);
-      --accent: #0071e3;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-      --radius: 28px;
+      --text-secondary: #6e6e73;
+      --line: rgba(17, 17, 17, 0.08);
+      --line-strong: rgba(17, 17, 17, 0.12);
+      --card: rgba(255, 255, 255, 0.72);
+      --card-strong: rgba(255, 255, 255, 0.82);
+      --blue: #0071e3;
+      --blue-soft: rgba(0, 113, 227, 0.08);
+      --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 10px 24px rgba(0, 0, 0, 0.05);
+      --radius-xl: 34px;
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --max: 1100px;
     }
 
     * {
@@ -26,136 +36,247 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
-        "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(120, 119, 255, 0.12), transparent 30%),
-        radial-gradient(circle at top right, rgba(0, 113, 227, 0.10), transparent 28%),
-        linear-gradient(180deg, #fbfbfd 0%, #f5f5f7 48%, #f2f2f4 100%);
-      line-height: 1.8;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "PingFang TC",
+        "Noto Sans TC",
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(0, 113, 227, 0.08), transparent 28%),
+        radial-gradient(circle at 100% 0%, rgba(123, 97, 255, 0.10), transparent 26%),
+        radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.9), transparent 42%),
+        linear-gradient(180deg, #fcfcfe 0%, #f7f7fa 48%, #f3f3f6 100%);
+      line-height: 1.85;
+      letter-spacing: 0.01em;
     }
 
-    .wrap {
-      max-width: 980px;
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 32px));
       margin: 0 auto;
-      padding: 56px 20px 80px;
+      padding: 28px 0 80px;
+    }
+
+    .hero-shell {
+      position: relative;
+      overflow: hidden;
+      border-radius: 40px;
+      margin-top: 18px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.72)),
+        linear-gradient(135deg, rgba(0,113,227,0.06), rgba(123,97,255,0.05));
+      border: 1px solid rgba(255,255,255,0.75);
+      box-shadow: var(--shadow-xl);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .hero-shell::before,
+    .hero-shell::after {
+      content: "";
+      position: absolute;
+      inset: auto;
+      border-radius: 999px;
+      pointer-events: none;
+      filter: blur(20px);
+      opacity: 0.9;
+    }
+
+    .hero-shell::before {
+      width: 240px;
+      height: 240px;
+      top: -80px;
+      right: -40px;
+      background: radial-gradient(circle, rgba(0,113,227,0.12), transparent 70%);
+    }
+
+    .hero-shell::after {
+      width: 240px;
+      height: 240px;
+      bottom: -100px;
+      left: -60px;
+      background: radial-gradient(circle, rgba(123,97,255,0.12), transparent 70%);
     }
 
     .hero {
+      position: relative;
+      z-index: 1;
+      padding: 80px 56px 64px;
       text-align: center;
-      padding: 56px 24px 40px;
     }
 
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
       border-radius: 999px;
       background: rgba(255,255,255,0.72);
       border: 1px solid rgba(0,0,0,0.06);
-      color: var(--secondary);
-      font-size: 14px;
-      letter-spacing: 0.01em;
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.04);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #5ac8fa, #0071e3);
+      box-shadow: 0 0 0 6px rgba(0,113,227,0.08);
     }
 
     h1 {
-      margin: 18px 0 14px;
-      font-size: clamp(36px, 6vw, 64px);
-      line-height: 1.06;
-      letter-spacing: -0.03em;
+      margin: 24px 0 16px;
+      font-size: clamp(42px, 7vw, 84px);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
       font-weight: 700;
     }
 
-    .subtitle {
-      max-width: 760px;
+    .hero-subtitle {
+      width: min(760px, 100%);
       margin: 0 auto;
-      color: var(--secondary);
-      font-size: clamp(17px, 2vw, 21px);
-      line-height: 1.7;
+      color: var(--text-secondary);
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.75;
     }
 
-    .updated {
-      margin-top: 18px;
-      color: var(--secondary);
+    .meta-row {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .meta-pill {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(0,0,0,0.06);
+      color: var(--text-secondary);
       font-size: 14px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
-    .panel {
+    .main-grid {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .sidebar,
+    .content-card {
       background: var(--card);
-      border: 1px solid rgba(255,255,255,0.65);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      padding: 34px 28px;
+      border: 1px solid rgba(255,255,255,0.78);
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      border-radius: var(--radius-lg);
+      padding: 22px 18px;
+    }
+
+    .sidebar-title {
+      margin: 0 0 14px;
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
     .toc {
-      margin: 18px 0 28px;
-    }
-
-    .toc-title {
-      margin: 0 0 16px;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .toc-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
     .toc a {
       display: block;
-      text-decoration: none;
+      padding: 12px 14px;
+      border-radius: 14px;
       color: var(--text);
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.74);
-      border: 1px solid var(--line);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
     }
 
     .toc a:hover {
+      background: rgba(255,255,255,0.7);
+      border-color: rgba(0,113,227,0.10);
+      text-decoration: none;
       transform: translateY(-1px);
-      border-color: rgba(0, 113, 227, 0.18);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
     }
 
-    .content {
-      margin-top: 22px;
+    .sidebar-note {
+      margin-top: 18px;
+      padding: 14px 14px;
+      border-radius: 16px;
+      background: rgba(0,113,227,0.05);
+      border: 1px solid rgba(0,113,227,0.08);
+      color: #284c74;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .content-card {
+      border-radius: var(--radius-xl);
+      padding: 14px 30px 8px;
     }
 
     section {
-      padding: 28px 0;
+      padding: 28px 0 30px;
       border-top: 1px solid var(--line);
     }
 
-    section:first-of-type {
+    section:first-child {
       border-top: none;
-      padding-top: 8px;
+      padding-top: 14px;
     }
 
     h2 {
-      margin: 0 0 12px;
-      font-size: clamp(22px, 2.4vw, 30px);
-      line-height: 1.25;
-      letter-spacing: -0.02em;
+      margin: 0 0 14px;
+      font-size: clamp(24px, 2.5vw, 34px);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
     }
 
     p {
       margin: 0 0 14px;
-      color: #2f2f31;
       font-size: 16px;
+      color: #2a2a2c;
     }
 
     ul {
@@ -165,101 +286,174 @@
 
     li {
       margin: 10px 0;
-      color: #2f2f31;
+      color: #2a2a2c;
     }
 
-    .note {
-      margin-top: 16px;
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: rgba(0, 113, 227, 0.06);
-      border: 1px solid rgba(0, 113, 227, 0.10);
-      color: #1f3f68;
+    .info-box {
+      margin-top: 18px;
+      padding: 18px 18px;
+      border-radius: 20px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.84), rgba(255,255,255,0.7));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-md);
+    }
+
+    .info-box strong {
+      display: block;
+      margin-bottom: 8px;
       font-size: 15px;
     }
 
-    .contact-card {
-      margin-top: 12px;
-      padding: 20px;
-      border-radius: 22px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.78));
-      border: 1px solid var(--line);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    .contact-box {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+      padding: 22px;
+      border-radius: 24px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.78));
+      border: 1px solid var(--line-strong);
+      box-shadow: var(--shadow-md);
     }
 
-    a {
-      color: var(--accent);
+    .contact-label {
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-email {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      word-break: break-word;
+    }
+
+    .signature {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.03);
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    .signature-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #1d1d1f, #3a3a3c);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
     footer {
       text-align: center;
-      color: var(--secondary);
+      color: var(--text-secondary);
       font-size: 14px;
-      margin-top: 28px;
-      padding-top: 10px;
+      margin-top: 22px;
+      padding-bottom: 8px;
     }
 
-    @media (max-width: 720px) {
-      .wrap {
-        padding: 28px 14px 48px;
-      }
-
-      .hero {
-        padding: 26px 10px 24px;
-      }
-
-      .panel {
-        padding: 24px 18px;
-        border-radius: 22px;
-      }
-
-      .toc-grid {
+    @media (max-width: 980px) {
+      .main-grid {
         grid-template-columns: 1fr;
       }
 
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 18px, var(--max));
+        padding: 12px 0 48px;
+      }
+
+      .hero {
+        padding: 44px 20px 38px;
+      }
+
+      .content-card {
+        padding: 10px 18px 6px;
+      }
+
+      .sidebar {
+        padding: 18px 14px;
+      }
+
       section {
-        padding: 22px 0;
+        padding: 22px 0 24px;
+      }
+
+      h1 {
+        letter-spacing: -0.04em;
       }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <div class="badge">YouCan Privacy Policy</div>
-      <h1>隱私權政策</h1>
-      <p class="subtitle">
-        YouCan 自律盲盒重視您的資料安全與使用透明度。
-        本頁面說明當您使用本應用程式時，我們可能收集哪些資料、如何使用這些資料，以及您可如何與我們聯絡。
-      </p>
-      <div class="updated">最後更新日期：2026 年 3 月 8 日</div>
+  <div class="page">
+    <header class="hero-shell">
+      <div class="hero">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          YouCan Privacy Policy
+        </div>
+        <h1>隱私權政策</h1>
+        <p class="hero-subtitle">
+          YouCan 自律盲盒重視您的資料安全與資訊透明。
+          本頁面說明您在使用本應用程式時，我們可能收集的資料類型、使用方式、保存方式，以及您可如何與開發人員聯絡。
+        </p>
+        <div class="meta-row">
+          <div class="meta-pill">最後更新日期：2026 年 3 月 8 日</div>
+          <div class="meta-pill">開發人員：Howard Ou</div>
+          <div class="meta-pill">聯絡信箱：ouhao0731@gmail.com</div>
+        </div>
+      </div>
     </header>
 
-    <main class="panel">
-      <nav class="toc">
-        <div class="toc-title">內容索引</div>
-        <div class="toc-grid">
+    <div class="main-grid">
+      <aside class="sidebar">
+        <div class="sidebar-title">內容索引</div>
+        <nav class="toc">
           <a href="#data">一、我們可能收集的資料</a>
           <a href="#usage">二、我們如何使用資料</a>
           <a href="#sharing">三、資料分享與第三方服務</a>
           <a href="#security">四、資料傳輸與安全</a>
           <a href="#retention">五、資料保存與刪除</a>
-          <a href="#permission">六、權限使用說明</a>
+          <a href="#permissions">六、權限使用說明</a>
           <a href="#children">七、兒童隱私</a>
-          <a href="#update">八、政策更新與聯絡方式</a>
+          <a href="#updates">八、政策更新</a>
+          <a href="#contact">九、聯絡方式</a>
+        </nav>
+        <div class="sidebar-note">
+          本隱私權政策應與目前版本實際提供之功能相對應，並不以未來尚未上線之功能作為資料收集依據。
         </div>
-      </nav>
+      </aside>
 
-      <div class="content">
+      <main class="content-card">
         <section id="data">
           <h2>一、我們可能收集的資料</h2>
           <p>當您使用 YouCan 自律盲盒時，我們可能收集下列資料類型：</p>
           <ul>
-            <li><strong>使用者識別資料：</strong>例如匿名使用者 ID，用於識別同一安裝實例、同步狀態與維持功能運作。</li>
-            <li><strong>名稱或暱稱：</strong>若您於應用程式中主動輸入名稱、暱稱或類似資訊，我們可能會儲存該資料。</li>
-            <li><strong>應用程式活動與互動資料：</strong>例如開啟 App、抽取盲盒、完成任務、領取獎勵、點擊功能、頁面操作與其他使用行為事件。</li>
-            <li><strong>使用者提供內容：</strong>例如您自行建立的挑戰、任務名稱、任務描述或其他主動輸入的內容。</li>
-            <li><strong>統計與分析資料：</strong>我們可能根據前述資料產生聚合分析、產品優化或功能調整所需的衍生資料。</li>
+            <li><strong>使用者識別資料：</strong>例如匿名使用者 ID，用於識別同一安裝實例、維持功能狀態、同步資料與提供應用程式功能。</li>
+            <li><strong>名稱或暱稱：</strong>若您主動於應用程式中輸入名稱、暱稱或類似資訊，我們可能會儲存該資料。</li>
+            <li><strong>應用程式活動與互動資料：</strong>例如開啟應用程式、抽取盲盒、完成任務、領取獎勵、點擊功能、頁面互動與其他使用行為事件。</li>
+            <li><strong>使用者提供內容：</strong>例如您建立的自訂挑戰、任務名稱、任務描述或其他由您主動輸入的內容。</li>
+            <li><strong>統計與分析資料：</strong>我們可能根據前述資料建立聚合分析、產品優化與服務改善所需的衍生資料。</li>
           </ul>
         </section>
 
@@ -268,13 +462,14 @@
           <p>我們可能基於以下目的使用資料：</p>
           <ul>
             <li>提供、維護與改善本應用程式的核心功能；</li>
-            <li>保存任務進度、獎勵發放、成長紀錄與互動狀態；</li>
-            <li>分析功能使用情況，以優化產品體驗與穩定性；</li>
-            <li>避免異常操作、重複領取或影響系統正常運作的情形；</li>
-            <li>在必要情況下，履行安全性、法規遵循或服務維護需求。</li>
+            <li>保存任務進度、成長紀錄、獎勵狀態與互動結果；</li>
+            <li>分析使用情況，以優化功能設計、穩定性與整體使用體驗；</li>
+            <li>避免異常操作、重複領取或其他影響系統正常運作的情形；</li>
+            <li>在必要情況下履行安全性、服務維護或法規遵循需求。</li>
           </ul>
-          <div class="note">
-            我們會依據目前版本中實際提供的功能處理資料，不會因未來可能推出但尚未上線的功能而額外收集不必要資訊。
+          <div class="info-box">
+            <strong>使用原則</strong>
+            我們僅會依據目前版本中已實際提供的功能處理資料，不會因未來可能推出但尚未上線的功能，而額外收集不必要資訊。
           </div>
         </section>
 
@@ -282,72 +477,83 @@
           <h2>三、資料分享與第三方服務</h2>
           <p>
             我們不會出售您的個人資料。
-            為了提供本應用程式服務，我們可能使用第三方雲端基礎設施、資料庫或後端服務協助處理與儲存資料。
+            為提供本應用程式之服務，我們可能使用第三方雲端基礎設施、資料庫或後端技術服務，以協助資料處理與儲存。
           </p>
           <p>
-            這些服務提供者僅於提供服務所必要的範圍內處理資料，並不代表我們將您的資料出售或用於不相關用途。
+            這些服務提供者僅於提供服務所必要的範圍內處理資料，並不代表我們將您的資料出售、出租或用於與本應用程式無關之用途。
           </p>
         </section>
 
         <section id="security">
           <h2>四、資料傳輸與安全</h2>
           <p>
-            我們採取合理技術與管理措施保護資料安全，並在適用情況下透過加密連線進行資料傳輸。
-            然而，任何網際網路傳輸或電子儲存方式均無法保證絕對安全。
+            我們採取合理之技術與管理措施保護資料安全，並在適用情況下透過加密連線傳輸資料。
+            然而，任何網際網路傳輸或電子儲存方式，均無法保證絕對安全。
           </p>
         </section>
 
         <section id="retention">
           <h2>五、資料保存與刪除</h2>
           <p>
-            我們會在提供功能、分析服務品質、維護系統穩定性及符合法律義務所需的期間內保存資料。
+            我們會在提供功能、分析服務品質、維護系統穩定性及履行法律義務所需之期間內保存資料。
           </p>
           <p>
             若您希望刪除與您相關的資料，可透過電子郵件與我們聯絡。由於本應用程式目前可能採匿名識別方式運作，
-            建議您於來信中提供可協助辨識的資訊，例如名稱、使用情境、畫面截圖或其他相關說明，以利我們定位資料。
+            建議您於來信時提供可協助辨識之資訊，例如名稱、相關使用情境、畫面截圖或其他可供定位資料之說明。
           </p>
         </section>
 
-        <section id="permission">
+        <section id="permissions">
           <h2>六、權限使用說明</h2>
           <p>
-            本應用程式僅會在功能需要時請求必要權限。
-            若特定版本使用裝置權限，該權限將僅用於對應功能，不會超出該功能目的進行不必要的資料蒐集。
+            本應用程式僅會於功能需要時請求必要權限。若特定版本使用裝置權限，該權限將僅用於對應功能，
+            不會超出該功能目的進行不必要之資料蒐集。
           </p>
           <p>
-            若您目前版本仍包含麥克風權限，其用途僅限於應用程式對應功能，不會在未經您知情與授權的情況下進行錄音、儲存或上傳音訊內容。
+            若您目前版本仍包含麥克風權限，其用途僅限於應用程式對應功能，不會在未經您知情與授權之情況下進行錄音、
+            儲存或上傳音訊內容。
           </p>
         </section>
 
         <section id="children">
           <h2>七、兒童隱私</h2>
           <p>
-            本應用程式並非專門為兒童設計。
-            若您認為未成年人在未經適當監護同意下提供了資料，請透過下方聯絡方式與我們聯繫。
+            本應用程式並非專門面向兒童設計。若您認為未成年人在未經適當監護同意下提供了資料，
+            請透過下方聯絡方式與我們聯繫。
           </p>
         </section>
 
-        <section id="update">
-          <h2>八、政策更新與聯絡方式</h2>
+        <section id="updates">
+          <h2>八、政策更新</h2>
           <p>
             我們可能不定期更新本隱私權政策。更新後的版本將公布於本頁面，並自公布時生效。
+            建議您定期查閱本頁面，以了解最新版本之政策內容。
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>九、聯絡方式</h2>
+          <p>
+            若您對本隱私權政策或資料處理方式有任何疑問，歡迎透過下列方式聯絡開發人員：
           </p>
 
-          <div class="contact-card">
-            <p><strong>聯絡電子郵件</strong></p>
-            <p>
+          <div class="contact-box">
+            <div class="contact-label">聯絡電子郵件</div>
+            <div class="contact-email">
               <a href="mailto:ouhao0731@gmail.com">ouhao0731@gmail.com</a>
-            </p>
-            <p style="margin-bottom:0;color:var(--secondary);">
-              若您對本隱私權政策或資料處理方式有任何疑問，歡迎來信聯絡。
-            </p>
+            </div>
+
+            <div class="signature">
+              <span class="signature-badge">OU</span>
+              <span>開發人員署名：Howard Ou</span>
+            </div>
           </div>
         </section>
-      </div>
-    </main>
+      </main>
+    </div>
 
     <footer>
-      © 2026 YouCan. All rights reserved.
+      © 2026 YouCan · 開發人員：Howard Ou
     </footer>
   </div>
 </body>
