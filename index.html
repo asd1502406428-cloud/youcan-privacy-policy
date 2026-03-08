@@ -2,30 +2,353 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
-  <title>YouCan 自律盲盒 隐私权政策</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouCan 自律盲盒｜隱私權政策</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif; margin: 24px; line-height: 1.6; }
-    h1, h2 { margin-top: 1.2em; }
+    :root {
+      --bg: #f5f5f7;
+      --card: rgba(255, 255, 255, 0.78);
+      --text: #1d1d1f;
+      --secondary: #6e6e73;
+      --line: rgba(0, 0, 0, 0.08);
+      --accent: #0071e3;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+        "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(120, 119, 255, 0.12), transparent 30%),
+        radial-gradient(circle at top right, rgba(0, 113, 227, 0.10), transparent 28%),
+        linear-gradient(180deg, #fbfbfd 0%, #f5f5f7 48%, #f2f2f4 100%);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 56px 20px 80px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 56px 24px 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(0,0,0,0.06);
+      color: var(--secondary);
+      font-size: 14px;
+      letter-spacing: 0.01em;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    h1 {
+      margin: 18px 0 14px;
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--secondary);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.7;
+    }
+
+    .updated {
+      margin-top: 18px;
+      color: var(--secondary);
+      font-size: 14px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      padding: 34px 28px;
+    }
+
+    .toc {
+      margin: 18px 0 28px;
+    }
+
+    .toc-title {
+      margin: 0 0 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .toc a {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid var(--line);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .toc a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(0, 113, 227, 0.18);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+    }
+
+    .content {
+      margin-top: 22px;
+    }
+
+    section {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    section:first-of-type {
+      border-top: none;
+      padding-top: 8px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(22px, 2.4vw, 30px);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: #2f2f31;
+      font-size: 16px;
+    }
+
+    ul {
+      margin: 14px 0 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 10px 0;
+      color: #2f2f31;
+    }
+
+    .note {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(0, 113, 227, 0.06);
+      border: 1px solid rgba(0, 113, 227, 0.10);
+      color: #1f3f68;
+      font-size: 15px;
+    }
+
+    .contact-card {
+      margin-top: 12px;
+      padding: 20px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.78));
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--secondary);
+      font-size: 14px;
+      margin-top: 28px;
+      padding-top: 10px;
+    }
+
+    @media (max-width: 720px) {
+      .wrap {
+        padding: 28px 14px 48px;
+      }
+
+      .hero {
+        padding: 26px 10px 24px;
+      }
+
+      .panel {
+        padding: 24px 18px;
+        border-radius: 22px;
+      }
+
+      .toc-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 22px 0;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>YouCan 自律盲盒 隐私权政策</h1>
+  <div class="wrap">
+    <header class="hero">
+      <div class="badge">YouCan Privacy Policy</div>
+      <h1>隱私權政策</h1>
+      <p class="subtitle">
+        YouCan 自律盲盒重視您的資料安全與使用透明度。
+        本頁面說明當您使用本應用程式時，我們可能收集哪些資料、如何使用這些資料，以及您可如何與我們聯絡。
+      </p>
+      <div class="updated">最後更新日期：2026 年 3 月 8 日</div>
+    </header>
 
-  <p>我们重视您的隐私。</p>
+    <main class="panel">
+      <nav class="toc">
+        <div class="toc-title">內容索引</div>
+        <div class="toc-grid">
+          <a href="#data">一、我們可能收集的資料</a>
+          <a href="#usage">二、我們如何使用資料</a>
+          <a href="#sharing">三、資料分享與第三方服務</a>
+          <a href="#security">四、資料傳輸與安全</a>
+          <a href="#retention">五、資料保存與刪除</a>
+          <a href="#permission">六、權限使用說明</a>
+          <a href="#children">七、兒童隱私</a>
+          <a href="#update">八、政策更新與聯絡方式</a>
+        </div>
+      </nav>
 
-  <h2>资料收集与使用</h2>
-  <p>YouCan 自律盲盒不会收集、储存或分享任何可识别个人身份的资讯。</p>
+      <div class="content">
+        <section id="data">
+          <h2>一、我們可能收集的資料</h2>
+          <p>當您使用 YouCan 自律盲盒時，我們可能收集下列資料類型：</p>
+          <ul>
+            <li><strong>使用者識別資料：</strong>例如匿名使用者 ID，用於識別同一安裝實例、同步狀態與維持功能運作。</li>
+            <li><strong>名稱或暱稱：</strong>若您於應用程式中主動輸入名稱、暱稱或類似資訊，我們可能會儲存該資料。</li>
+            <li><strong>應用程式活動與互動資料：</strong>例如開啟 App、抽取盲盒、完成任務、領取獎勵、點擊功能、頁面操作與其他使用行為事件。</li>
+            <li><strong>使用者提供內容：</strong>例如您自行建立的挑戰、任務名稱、任務描述或其他主動輸入的內容。</li>
+            <li><strong>統計與分析資料：</strong>我們可能根據前述資料產生聚合分析、產品優化或功能調整所需的衍生資料。</li>
+          </ul>
+        </section>
 
-  <h2>权限使用说明</h2>
-  <ul>
-    <li><strong>麦克风（RECORD_AUDIO）</strong>：仅用于应用内功能（如音效或互动功能），不会进行录音、储存或上传任何音频资料。</li>
-  </ul>
+        <section id="usage">
+          <h2>二、我們如何使用資料</h2>
+          <p>我們可能基於以下目的使用資料：</p>
+          <ul>
+            <li>提供、維護與改善本應用程式的核心功能；</li>
+            <li>保存任務進度、獎勵發放、成長紀錄與互動狀態；</li>
+            <li>分析功能使用情況，以優化產品體驗與穩定性；</li>
+            <li>避免異常操作、重複領取或影響系統正常運作的情形；</li>
+            <li>在必要情況下，履行安全性、法規遵循或服務維護需求。</li>
+          </ul>
+          <div class="note">
+            我們會依據目前版本中實際提供的功能處理資料，不會因未來可能推出但尚未上線的功能而額外收集不必要資訊。
+          </div>
+        </section>
 
-  <h2>第三方分享</h2>
-  <p>本应用不会将用户资料提供给第三方。</p>
+        <section id="sharing">
+          <h2>三、資料分享與第三方服務</h2>
+          <p>
+            我們不會出售您的個人資料。
+            為了提供本應用程式服務，我們可能使用第三方雲端基礎設施、資料庫或後端服務協助處理與儲存資料。
+          </p>
+          <p>
+            這些服務提供者僅於提供服務所必要的範圍內處理資料，並不代表我們將您的資料出售或用於不相關用途。
+          </p>
+        </section>
 
-  <h2>联系我们</h2>
-  <p>如有任何问题，请联系：<a href="mailto:youcan.app@gmail.com">youcan.app@gmail.com</a></p>
+        <section id="security">
+          <h2>四、資料傳輸與安全</h2>
+          <p>
+            我們採取合理技術與管理措施保護資料安全，並在適用情況下透過加密連線進行資料傳輸。
+            然而，任何網際網路傳輸或電子儲存方式均無法保證絕對安全。
+          </p>
+        </section>
+
+        <section id="retention">
+          <h2>五、資料保存與刪除</h2>
+          <p>
+            我們會在提供功能、分析服務品質、維護系統穩定性及符合法律義務所需的期間內保存資料。
+          </p>
+          <p>
+            若您希望刪除與您相關的資料，可透過電子郵件與我們聯絡。由於本應用程式目前可能採匿名識別方式運作，
+            建議您於來信中提供可協助辨識的資訊，例如名稱、使用情境、畫面截圖或其他相關說明，以利我們定位資料。
+          </p>
+        </section>
+
+        <section id="permission">
+          <h2>六、權限使用說明</h2>
+          <p>
+            本應用程式僅會在功能需要時請求必要權限。
+            若特定版本使用裝置權限，該權限將僅用於對應功能，不會超出該功能目的進行不必要的資料蒐集。
+          </p>
+          <p>
+            若您目前版本仍包含麥克風權限，其用途僅限於應用程式對應功能，不會在未經您知情與授權的情況下進行錄音、儲存或上傳音訊內容。
+          </p>
+        </section>
+
+        <section id="children">
+          <h2>七、兒童隱私</h2>
+          <p>
+            本應用程式並非專門為兒童設計。
+            若您認為未成年人在未經適當監護同意下提供了資料，請透過下方聯絡方式與我們聯繫。
+          </p>
+        </section>
+
+        <section id="update">
+          <h2>八、政策更新與聯絡方式</h2>
+          <p>
+            我們可能不定期更新本隱私權政策。更新後的版本將公布於本頁面，並自公布時生效。
+          </p>
+
+          <div class="contact-card">
+            <p><strong>聯絡電子郵件</strong></p>
+            <p>
+              <a href="mailto:ouhao0731@gmail.com">ouhao0731@gmail.com</a>
+            </p>
+            <p style="margin-bottom:0;color:var(--secondary);">
+              若您對本隱私權政策或資料處理方式有任何疑問，歡迎來信聯絡。
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      © 2026 YouCan. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
